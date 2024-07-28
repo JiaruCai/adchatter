@@ -12,19 +12,23 @@
             --text-color: #333333;
         }
 
-        body {
+        body, html {
             font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            flex: 1;
         }
 
         header {
@@ -69,12 +73,17 @@
         }
 
         .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 32rem; /* Slightly increased height */
             text-align: center;
-            padding: 8rem 0 4rem;
+            padding: 2.5rem 1rem; /* Slightly more padding */
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.5rem; /* Use rem for responsive sizing */
             margin-bottom: 1rem;
             color: var(--primary-color);
         }
@@ -160,15 +169,16 @@
         footer {
             background-color: var(--primary-color);
             color: #fff;
-            padding: 2rem 0;
+            padding: 1rem 0; /* Reduced padding */
             text-align: center;
+            font-size: 0.9rem; /* Optional: smaller font size */
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="container">
-            <img src="path_to_your_logo.png" alt="Chatbot Ads Logo" class="logo">
+            <img src="/pictures/brand_logo.png" alt="Chatbot Ads Logo" class="logo">
             <ul>
                 <li><a href="#advertisers">Advertisers</a></li>
                 <li><a href="#publishers">Publishers</a></li>
@@ -178,8 +188,8 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero container">
+    <main class="container">
+        <section class="hero">
             <h1>Chatbot Ads: AI-Powered Advertising Marketplace</h1>
             <p class="subtitle">Connecting Innovative Advertisers with Cutting-Edge Chatbot Publishers</p>
             <div class="cta-buttons">
